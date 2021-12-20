@@ -78,7 +78,7 @@ i {
 .cardSkill {
   background-color: var(--clr-back);
   box-shadow: 0 3px 10px var(--clr-back);
-  padding: 1.9rem;
+  padding: 1.65rem;
   border-radius: 15px;
   background: linear-gradient(
     90deg,
@@ -192,7 +192,9 @@ nav a:hover {
 /* ============== ABOUT STYLES ============= */
 
 .about {
-  padding: 3rem;
+  padding-top: 3rem;
+  margin: auto;
+  width: 88%;
 }
 
 .about .aboutText {
@@ -237,9 +239,9 @@ nav a:hover {
 /* ============== SKILLS STYLES ============= */
 
 .skills {
-  margin: auto;
   padding-top: 3rem;
-  width: 90%;
+  margin: auto;
+  width: 85%;
 }
 
 .skillsGrid {
