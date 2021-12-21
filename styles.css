@@ -495,39 +495,39 @@ form label {
     right: 0;
     left: 0;
     z-index: 10;
-    flex-direction: row;
+    flex-direction: column;
+    background-color: var(--clr-primary);
     justify-content: center;
     align-items: center;
-    background: var(--clr-primary);
     transition: top 1s ease;
     display: none;
   }
-  .ul .mainMenu .row {
+
+  nav .mainMenu a {
+    border-bottom: 3px solid var(--clr-lightGrey);
+  }
+
+  .main .fixedMenu {
     flex-direction: row;
-  }
-
-  ul .mainMenu .closeMenu {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-  }
-
-  nav .openMenu {
-    display: block;
   }
 
   nav .resumeBtn {
     display: none;
   }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+  }
+  nav .openMenu {
+    display: block;
+  }
 
-  /* .row {
+  body .row {
     flex-direction: column;
-  } */
-
-  /* .rowNav {
-    display: none;
-  } */
+  }
 
   .projects img {
     width: 100%;
@@ -618,5 +618,10 @@ form label {
 
   .projects .reverse {
     flex-direction: column-reverse;
+  }
+
+  .details {
+    margin-top: 0.45rem;
+    margin-bottom: 1rem;
   }
 }
