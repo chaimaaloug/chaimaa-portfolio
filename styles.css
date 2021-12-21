@@ -3,8 +3,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
-/*========== Globale Styles =============*/
-
 :root {
   --clr-primary: #10152b;
   --clr-secondary: #00bfa6;
@@ -21,6 +19,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/*=============== SCROLL BAR ===============*/
+
+::-webkit-scrollbar {
+  width: 0.76rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clr-back);
+}
+
+/* Thumb is the part that shows us where we are in the page */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-lightGrey);
+  border-radius: 100vw;
 }
 
 /* ============== GLOBAL STYLES ============= */
@@ -50,6 +64,15 @@ h4 {
   color: var(--clr-purple);
   margin-bottom: 1.77rem;
   font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 i {
@@ -89,15 +112,6 @@ i {
 
 /* ============== NAVIGATION STYLES ============= */
 
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 nav a {
   text-decoration: none;
   text-transform: uppercase;
@@ -113,9 +127,7 @@ nav a:hover {
   color: var(--clr-lightGrey);
 }
 
-/* FIXED NAVIGATION */
-
-.rowNav {
+.fixedMenu {
   overflow: hidden;
   position: fixed;
   background-color: var(--clr-primary);
@@ -124,26 +136,42 @@ nav a:hover {
   width: 100%;
 }
 
-.rowNav ul {
-  display: flex;
-  align-items: center;
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
 }
 
-.rowNav .resumeBtn {
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 1.44rem;
+  display: none;
+  cursor: pointer;
+}
+
+/* .row ul {
+  display: flex;
+  align-items: center;
+} */
+
+nav .resumeBtn {
   padding: 0.5rem;
   border-radius: 3px;
   font-size: 18px;
   color: var(--clr-secondary);
   border: solid 1px var(--clr-secondary);
 }
-.rowNav .resumeBtn:hover {
+
+nav .resumeBtn:hover {
   color: var(--clr-back);
   background-color: var(--clr-secondary);
 }
 
-.logo {
+nav .logo {
   width: 77px;
-  margin-left: -2.78rem;
+  /* margin-left: -2.78rem; */
+  cursor: pointer;
 }
 
 /* ============== SHOWCASE STYLES ============= */
@@ -158,6 +186,7 @@ nav a:hover {
   box-shadow: 0 3px 10px var(--clr-back);
   margin-top: 4rem;
   padding: 1.5rem;
+  cursor: pointer;
 }
 
 .intro .green {
@@ -451,16 +480,54 @@ form label {
 /* =============== Media Query ============== */
 /* ========================================== */
 
-/* Media Query : 768px */
+/* Media Query : 860px */
 
-@media screen and (max-width: 860px) {
-  .row {
-    flex-direction: column;
+@media screen and (max-width: 919px) {
+  .showCase .row {
+    padding-top: 4rem;
   }
+  /* Navigation */
 
-  .rowNav {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-primary);
+    transition: top 1s ease;
     display: none;
   }
+  .ul .mainMenu .row {
+    flex-direction: row;
+  }
+
+  ul .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+
+  nav .openMenu {
+    display: block;
+  }
+
+  nav .resumeBtn {
+    display: none;
+  }
+
+  /* .row {
+    flex-direction: column;
+  } */
+
+  /* .rowNav {
+    display: none;
+  } */
 
   .projects img {
     width: 100%;
@@ -497,17 +564,9 @@ form label {
   }
 }
 
-/* Media Query : 360px */
+/* Media Query : 490px */
 
 @media screen and (max-width: 490px) {
-  .row {
-    flex-direction: column;
-  }
-
-  .rowNav {
-    display: none;
-  }
-
   .codeInfo {
     font-size: 14px;
     padding: 1rem;
@@ -559,10 +618,5 @@ form label {
 
   .projects .reverse {
     flex-direction: column-reverse;
-  }
-
-  .details {
-    margin-top: 0.45rem;
-    margin-bottom: 1rem;
   }
 }

@@ -18,12 +18,12 @@
     <!--************* HEADER SECTION ****************-->
 
     <header class="main">
-    
-        <div class="row rowNav">
+        
+        <!-- <div class="row rowNav">
             <img src="img/logo.svg" alt="" class="logo">
 
             <nav class="navBar">
-                <ul>
+                <ul class="navList" id = "navList">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -34,7 +34,30 @@
 
             <a href="resume/chaimaaCV.pdf" target="_blank" class="resumeBtn">Resume</a>
 
-        </div>    
+        </div>   -->
+        <nav class="row fixedMenu">
+
+            <img src="img/logo.svg" alt="" class="logo">
+            
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu row">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+               
+               
+            </ul>
+
+            <a href="resume/chaimaaCV.pdf" target="_blank" class="resumeBtn">Resume</a>
+          
+        </nav>
+
+        
+        
     </header>
 
 <!--************* SHOWCASE SECTION ****************-->
@@ -155,7 +178,7 @@
         </div>
     </div>    
 </section>
-
+<script src="script.js"></script>
 </body>
 
 <footer>
