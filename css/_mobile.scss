@@ -1,0 +1,77 @@
+@media screen and (max-width: 919px) {
+  .showCase {
+    .row {
+      padding-top: 4rem;
+    }
+  }
+  nav {
+    .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      flex-direction: column;
+      background-color: $primary;
+      justify-content: center;
+      align-items: center;
+      transition: top 1s ease;
+      display: none;
+      a {
+        border-bottom: 3px solid $lightgrey;
+      }
+      .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+      }
+    }
+    .resumeBtn {
+      display: none;
+    }
+    .openMenu {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 490px) {
+  .codeInfo {
+    font-size: 14px;
+    padding: 1rem;
+    margin: auto;
+  }
+  .codeBlockMarge {
+    margin-top: 1.78rem;
+  }
+  .intro {
+    .green {
+      font-size: 55px;
+    }
+    .blue {
+      font-size: 26px;
+      margin-bottom: 2rem;
+    }
+  }
+  .cardSkill {
+    margin-top: 1.88rem;
+  }
+  .about {
+    .card {
+      margin-top: 1.88rem;
+    }
+  }
+  input[type="submit"] {
+    margin-bottom: 4rem;
+  }
+  footer {
+    p {
+      font-size: 14px;
+    }
+  }
+  .contact {
+    padding: 1.56rem;
+  }
+}

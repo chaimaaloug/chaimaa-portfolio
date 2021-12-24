@@ -3,8 +3,6 @@ const closeMenu = document.querySelector('.closeMenu');
 const openMenu = document.querySelector('.openMenu');
 
 
-
-
 openMenu.addEventListener('click',show);
 closeMenu.addEventListener('click',close);
 
@@ -15,3 +13,13 @@ function show(){
 function close(){
     mainMenu.style.top = '-100%';
 }
+
+
+// const card= document.querySelector('.cardInner')
+// console.log('debug')
+// card.addEventListener('click', function(){
+   
+//     card.classList.toggle('isFlipped');
+  
+// })
+

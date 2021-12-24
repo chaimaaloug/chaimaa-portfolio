@@ -1,0 +1,75 @@
+.projects {
+  display: grid;
+  // // MAKING GRIDS RESPONSIVE
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+  margin-top: 9rem;
+  padding: 4rem;
+
+  .box {
+    .image {
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem 0.5rem 0 0;
+        cursor: pointer;
+      }
+    }
+
+    .content {
+      padding: 1rem;
+      box-shadow: 0 5px 10px $back;
+      background: linear-gradient(
+        90deg,
+        rgba(16, 21, 43, 0.7628093473717612) 0%,
+        rgba(35, 41, 73, 0.7151902997527135) 54%
+      );
+      margin-top: -0.55rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+
+      .icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+          font-size: 1.4rem;
+
+          i {
+            color: $secondary;
+          }
+
+          &:hover {
+            color: $purple;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 1.7rem;
+        color: $secondary;
+        letter-spacing: 0;
+      }
+
+      p {
+        padding: 0.9rem 0;
+        font-size: 1.2rem;
+
+        .hightlight {
+          color: $secondary;
+          font-weight: bold;
+        }
+
+        .techno {
+          color: $purple;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

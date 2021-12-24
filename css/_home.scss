@@ -1,0 +1,138 @@
+/* =========================  SHOWCASE SECTION STYLES  ======================== */
+
+.showCase {
+  padding: 3rem;
+
+  .codeInfo {
+    background-color: $back;
+    font-size: 18px;
+    box-shadow: 0 3px 10px $back;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    .grey {
+      color: $lightgrey;
+    }
+    .purple {
+      color: $purple;
+    }
+    .blue {
+      color: $blue;
+    }
+  }
+  .intro {
+    .green {
+      color: $secondary;
+      text-align: center;
+      font-size: 95px;
+      font-weight: bold;
+    }
+    .blue {
+      font-size: 38px;
+      font-style: italic;
+      font-weight: 600;
+      color: $blue;
+      color: $blue;
+    }
+  }
+
+  .codeBlockMarge {
+    margin-left: 3.45rem;
+  }
+}
+
+/* =======================  ABOUT SECTION STYLES  ======================== */
+
+.about {
+  padding-top: 3rem;
+  margin: auto;
+  width: 88%;
+
+  .card {
+    background-color: $back;
+    box-shadow: 0 3px 10px $back;
+    padding: 1.65rem;
+    border-radius: 15px;
+    background: linear-gradient(
+      90deg,
+      rgba(16, 21, 43, 0.7628093473717612) 0%,
+      rgba(35, 41, 73, 0.7151902997527135) 54%
+    );
+  }
+  .aboutText {
+    font-size: 18px;
+  }
+  .green {
+    color: $secondary;
+    font-weight: bold;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2.77rem;
+    margin-top: 3.33rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    margin: 1.6rem 0;
+    .year {
+      color: $secondary;
+      margin-bottom: 1rem;
+      font-size: 22px;
+    }
+    .degree {
+      font-size: 20px;
+      color: $blue;
+      margin-bottom: 1rem;
+    }
+    .location {
+      font-style: italic;
+      font-size: 16px;
+    }
+    .description {
+      font-size: 18px;
+    }
+  }
+}
+
+/* ========================= SKILLS SECTION STYLES  ========================= */
+
+.skills {
+  padding-top: 3rem;
+  margin: auto;
+  width: 88%;
+
+  .skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2.78rem;
+    padding: 1.67rem;
+    margin-bottom: 4rem;
+  }
+
+  .cardSkill {
+    background-color: $back;
+    box-shadow: 0 3px 10px $back;
+    padding: 1.65rem;
+    border-radius: 15px;
+    background: linear-gradient(
+      90deg,
+      rgba(16, 21, 43, 0.7628093473717612) 0%,
+      rgba(35, 41, 73, 0.7151902997527135) 54%
+    );
+    text-align: center;
+    &:hover {
+      opacity: 0.7;
+    }
+    h3 {
+      margin: 0.7rem 1rem;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}
