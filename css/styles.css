@@ -322,17 +322,13 @@ footer i {
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2.77rem;
-  margin-top: 3.33rem;
+  margin-top: 4.59rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.about .card {
-  margin: 1.6rem 0;
 }
 
 .about .card .year {
@@ -398,103 +394,70 @@ footer i {
   font-size: 18px;
 }
 
-section h2 {
-  padding: 4rem;
-  margin-bottom: 3rem;
+/* ========================= PROJECT SECTION STYLES  ========================= */
+.projects {
+  padding-top: 3rem;
+  margin: auto;
+  width: 88%;
 }
 
-.projects {
+.projects .row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 2rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 9rem;
-  padding: 4rem;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 1rem;
 }
 
-.projects .box .image {
+.projects img {
+  width: 75%;
+  border-radius: 10px;
+}
+
+.projects .projet {
+  padding: 2.78rem;
+}
+
+.projects .projet .techno {
+  color: #9171af;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.projects .projet .projectName {
+  color: #00bfa6;
+  font-size: 28px;
+}
+
+.swiper {
   width: 100%;
-  overflow: hidden;
-}
-
-.projects .box .image img {
   height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 0.5rem 0.5rem 0 0;
-  cursor: pointer;
 }
 
-.projects .box .content {
-  padding: 1rem;
-  -webkit-box-shadow: 0 5px 10px #232949;
-          box-shadow: 0 5px 10px #232949;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(16, 21, 43, 0.762809)), color-stop(54%, rgba(35, 41, 73, 0.71519)));
-  background: linear-gradient(90deg, rgba(16, 21, 43, 0.762809) 0%, rgba(35, 41, 73, 0.71519) 54%);
-  margin-top: -0.55rem;
-  border-radius: 0 0 0.5rem 0.5rem;
+.swiper-slide {
+  font-size: 18px;
+  padding: 2.45rem;
 }
 
-.projects .box .content .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
+  color: #adadad;
 }
 
-.projects .box .content .icons a {
-  font-size: 1.4rem;
-}
-
-.projects .box .content .icons a i {
-  color: #00bfa6;
-}
-
-.projects .box .content .icons a:hover {
-  color: #9171af;
-}
-
-.projects .box .content h3 {
-  font-size: 1.7rem;
-  color: #00bfa6;
-  letter-spacing: 0;
-}
-
-.projects .box .content p {
-  padding: 0.9rem 0;
-  font-size: 1.2rem;
-}
-
-.projects .box .content p .hightlight {
-  color: #00bfa6;
-  font-weight: bold;
-}
-
-.projects .box .content p .techno {
-  color: #9171af;
-  font-weight: bold;
-}
-
+/* ========================= CONTACT SECTION STYLES  ========================= */
 .contact {
-  margin-top: 5rem;
-  padding: 4rem;
+  padding-top: 3rem;
+  margin: auto;
+  width: 88%;
 }
 
 .contact .row {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: 3rem;
+  padding-top: 4rem;
 }
 
 .contact .mailStyle {
@@ -517,7 +480,7 @@ section h2 {
   font-weight: bold;
   font-size: 20px;
   color: #00bfa6;
-  border-bottom: 4px solid #adadad;
+  border-bottom: 5px solid #adadad;
 }
 
 input[type="text"] {

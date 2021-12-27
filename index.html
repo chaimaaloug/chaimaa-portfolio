@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Portfolio Website -->
     <link rel="icon" type="image/svg" href="img/icon.svg"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
@@ -29,8 +32,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
                 
                 <div class="closeMenu"><i class="fa fa-times"></i></div>
                
@@ -163,6 +166,132 @@
         </div>
     </div>    
 </section>
+
+
+<!--************* PROJECTS SECTION ****************-->
+
+<section class="projects" id="projects">
+    <h2 class="title">#<span class="titleColor">PROJECTS</span></h2>
+
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+
+            <div class="row projetCard">
+            
+                <div class="projet">
+                    <h3 class="projectName">Movie App with TMDB API</h3>
+                    <p class="techno">#HTML #SCSS #JS #TMDB API </p>
+                    <p>Building a movie app that displays the most popular movies with their information and rate using TMDB API.</p>
+               </div>
+        
+               <img src="img/projects/movie.png" alt="">
+            </div>
+        
+
+          </div>
+          
+          
+          <!-- SLIDE 2 -->
+
+          <div class="swiper-slide">
+            <div class="row">
+                
+                <div class="projet">
+                    <h3 class="projectName">WeightLight</h3>
+                    <p class="techno">#HTML #CSS #JS #PHP #Figma </p>
+                    <p>WeightLight is an on going <span class="hightlight">Responsive</span> web application that allows users to track their weight, sport activities and food.
+               </div>
+               <img src="img/projects/weightlight.png" alt="">
+            </div>
+    
+
+          </div>
+
+
+          <div class="swiper-slide">
+
+            <div class="row">
+                <div class="projet">
+                    <h3 class="projectName">Education Website</h3>
+                    <p class="techno">#HTML #SCSS #JS</p>
+                    <p>Building a full mobile and user-friendly educational website using CSS Forms, Grids and Flexbox.</p>
+               </div>
+               <img src="img/projects/educa.png" alt="">
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="row">
+                <div class="projet">
+                    <h3 class="projectName">Starbucks </h3>
+                    <p class="techno">#HTML #SCSS #JS</p>
+                    <p>Rebuilding the home page of <a href="https://www.starbucks.com/" target="_blank">starbucks.com</a> website using CSS Grids and Flexbox.</p>
+               </div>
+               <img src="img/projects/starbucks.png" alt="">
+            </div>
+
+          </div>
+         
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+</section>
+
+
+<!-- CONTACT ME SECTION -->
+
+
+<div class="contact">
+
+    <h2 class="title">#<span class="titleColor">Get in touch</span></h2>
+
+    <p class="contactText">If you'd like to send me a message, I can be reached through various ways! If you prefer email, simply fill out the form below or send me a message directly at <a href="mailto:lougsari2016@gmail.com"><span class="mailStyle">lougsari2016@gmail.com</span></a> .</p>
+
+     <div class="row">
+         
+         <form method="POST" action="">
+             <div class="formBloc">
+                 <label for="fname">Name</label>
+                 <input type="text" id="fname" name="firstname">
+             </div>
+         
+             <div class="formBloc">
+                 <label for="lname">Email</label>
+                 <input type="email" id="email" name="email">
+             </div>
+
+             <div class="formBloc">
+                 <label for="lname">Message</label>
+                 <textarea name="message" rows="10" cols="40"></textarea>
+             </div>
+
+             <input type="submit" class="formBtn" value="Send Message">
+         </form>
+
+         <div class="addInfo">
+           <p class="contactText">Elsewhere, I can be found at the following plateforms : </p>
+             <div class="socialMedia">
+                 <a href="https://www.linkedin.com/in/chaimaa-lougsari-034535166/" target="_blank">LinkedIn : <span class="underline">chaimaa lougsari</span></a><br>
+                 <a href="https://twitter.com/chaimaa_loug" target="_blank">Twitter : <span class="underline">@chaimaa_loug</span></a><br>
+                 <a href="https://github.com/chaimaaloug" target="_blank">Github : <span class="underline">chaimaaloug</span></a>
+             </div>
+         </div>
+
+     </div>
+
+</div>
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
 <script src="script.js"></script>
 </body>
 
