@@ -191,14 +191,25 @@
 
 /* ========================= CONTACT SECTION STYLES  ========================= */
 
+.thanksMessage {
+  text-align: center;
+
+  padding: 11rem;
+}
+
+.message {
+  padding-top: 5rem;
+}
 .contact {
   padding-top: 3rem;
   margin: auto;
   width: 88%;
-  .row {
-    align-items: flex-start;
-    padding-top: 4rem;
+  .flex {
+    display: flex;
+    gap: 5rem;
+    margin-top: 4rem;
   }
+
   .mailStyle {
     background-color: $back;
     border-radius: 3px;
@@ -246,14 +257,15 @@ input[type="email"] {
   margin: 0.4em auto 0.8em auto;
 }
 
-input[type="submit"] {
+button[type="submit"] {
   background-color: $back;
   color: $white;
   font-size: 16px;
   border-radius: 6px;
   padding: 18px;
   border: 0;
-  width: 100%;
+  width: 50%;
+
   margin: 0.4em auto 0.8em auto;
   border: 1px solid $secondary;
   color: $secondary;
