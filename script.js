@@ -39,17 +39,11 @@ function close(){
 
 
 
-                                            let  i       = {};
-                                            i.intro      = 'web developer';
-                                            i.techSkills = ['HTML', 'CSS', 'SCSS', 'JS','REACTJS', 'PHP', 'MySQL', 'JAVA', 'DOCKER'];
-                                            i.hobbies    = ['reading', 'cooking', 'photography'];
 
 
 
 
 
-
-                                            
                                        
 
 
