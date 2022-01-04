@@ -394,6 +394,15 @@ footer i {
   font-size: 18px;
 }
 
+.experience {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(480px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  grid-gap: 2rem;
+  margin-top: 2.9rem;
+}
+
 /* ========================= PROJECT SECTION STYLES  ========================= */
 .projects {
   padding-top: 3rem;
@@ -407,6 +416,7 @@ footer i {
   -ms-grid-columns: (minmax(500px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   grid-gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .projects img {
@@ -415,7 +425,10 @@ footer i {
 }
 
 .projects .projet {
-  padding: 2.78rem;
+  padding: 1.3rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .projects .projet .techno {
@@ -444,6 +457,13 @@ footer i {
 .swiper-button-prev,
 .swiper-pagination {
   color: #adadad;
+}
+
+.projetReserve {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 /* ========================= CONTACT SECTION STYLES  ========================= */
