@@ -4,6 +4,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 /* ==================  COLORS  ======================== */
 @media screen and (max-width: 919px) {
+  .hobbies .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .showCase .row {
     padding-top: 4rem;
   }
@@ -403,11 +415,25 @@ footer i {
   margin-top: 2.9rem;
 }
 
+.experience .card {
+  border: 1px solid #00bfa6;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.experience .card:hover {
+  opacity: 0.8;
+}
+
 /* ========================= PROJECT SECTION STYLES  ========================= */
 .projects {
-  padding-top: 3rem;
+  padding-top: 8rem;
   margin: auto;
   width: 88%;
+}
+
+.projects h2 {
+  margin-bottom: 3rem;
 }
 
 .projects .row {
@@ -574,5 +600,33 @@ form label {
   font-size: 22px;
   font-weight: bold;
   color: #00bfa6;
+}
+
+.hobbies {
+  padding-top: 3rem;
+  margin: auto;
+  width: 88%;
+}
+
+.hobbie {
+  padding: 5rem;
+  margin: 1rem;
+  border: 2px solid #00bfa6;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.hobbie:hover {
+  opacity: 0.8;
+  background-color: #00bfa6;
+  color: #10152b;
+}
+
+.hobbie:hover i {
+  color: #10152b;
+}
+
+.hobbie h3 {
+  margin-top: 0.7rem;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -142,14 +142,27 @@
   grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
   grid-gap: 2rem;
   margin-top: 2.9rem;
+
+  .card {
+    border: 1px solid $secondary;
+    box-shadow: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 /* ========================= PROJECT SECTION STYLES  ========================= */
 
 .projects {
-  padding-top: 3rem;
+  padding-top: 8rem;
   margin: auto;
   width: 88%;
+
+  h2 {
+    margin-bottom: 3rem;
+  }
 
   .row {
     display: grid;
@@ -217,6 +230,7 @@
   padding-top: 3rem;
   margin: auto;
   width: 88%;
+
   .flex {
     display: flex;
     gap: 5rem;
@@ -310,5 +324,33 @@ form {
     font-size: 22px;
     font-weight: bold;
     color: $secondary;
+  }
+}
+
+.hobbies {
+  padding-top: 3rem;
+  margin: auto;
+  width: 88%;
+}
+
+.hobbie {
+  padding: 5rem;
+  margin: 1rem;
+
+  border: 2px solid $secondary;
+  border-radius: 14px;
+  text-align: center;
+  &:hover {
+    opacity: 0.8;
+    background-color: $secondary;
+    color: $primary;
+
+    i {
+      color: $primary;
+    }
+  }
+
+  h3 {
+    margin-top: 0.7rem;
   }
 }
