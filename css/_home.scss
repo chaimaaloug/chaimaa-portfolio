@@ -60,7 +60,7 @@
     );
   }
   .aboutText {
-    font-size: 18px;
+    font-size: 23px;
   }
   .green {
     color: $secondary;
@@ -69,7 +69,7 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     grid-gap: 2.77rem;
     margin-top: 4.59rem;
     justify-content: center;
@@ -92,7 +92,7 @@
       font-size: 16px;
     }
     .description {
-      font-size: 18px;
+      font-size: 19px;
     }
   }
 }
@@ -146,6 +146,9 @@
   .card {
     border: 1px solid $secondary;
     box-shadow: none;
+    .description {
+      font-size: 20px;
+    }
 
     &:hover {
       opacity: 0.8;

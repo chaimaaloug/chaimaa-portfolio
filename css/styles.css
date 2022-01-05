@@ -4,6 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 /* ==================  COLORS  ======================== */
 @media screen and (max-width: 919px) {
+  .about .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
   .hobbies .row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -320,7 +324,7 @@ footer i {
 }
 
 .about .aboutText {
-  font-size: 18px;
+  font-size: 23px;
 }
 
 .about .green {
@@ -331,8 +335,8 @@ footer i {
 .about .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(340px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   grid-gap: 2.77rem;
   margin-top: 4.59rem;
   -webkit-box-pack: center;
@@ -361,7 +365,7 @@ footer i {
 }
 
 .about .card .description {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 /* ========================= SKILLS SECTION STYLES  ========================= */
@@ -419,6 +423,10 @@ footer i {
   border: 1px solid #00bfa6;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.experience .card .description {
+  font-size: 20px;
 }
 
 .experience .card:hover {

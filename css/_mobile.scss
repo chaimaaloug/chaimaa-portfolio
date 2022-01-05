@@ -1,9 +1,10 @@
 @media screen and (max-width: 919px) {
+  .about .grid {
+    grid-template-columns: 1fr;
+  }
   .hobbies {
     .row {
       flex-direction: column;
-      .hobbie {
-      }
     }
   }
 
