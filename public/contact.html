@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Portfolio Website -->
     <link rel="icon" type="image/svg" href="img/icon.svg" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
-
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Chaimaa's Portfolio</title>
+
+
 </head>
 
 
@@ -55,18 +54,18 @@
             <p class="contactText">If you'd like to send me a message, fill out the form below.</p>
 
             <div class="flex">
-                <form action="https://formsubmit.co/lougsari2016@gmail.com" method="POST">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://chaimalougsari.netlify.app/thanks.html">
+                <form id="contactForm">
+                    <!-- <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://chaimalougsari.netlify.app/thanks.html"> -->
 
-                    <label for="fname">Name</label>
-                    <input type="text" name="name" required>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
 
-                    <label for="lname">Email</label>
-                    <input type="email" name="email" required>
-                    <label for="lname">Message</label>
-                    <textarea name="message" rows="10" cols="40"></textarea>
-                    <button type="submit" class="formBtn">Send Message</button>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea name="message" rows="10" cols="40" id="message"></textarea>
+                    <button type="submit" id="submit" class="formBtn">Send Message</button>
                 </form>
 
                 <div class="addInfo">
@@ -85,10 +84,10 @@
         </div>
 
     </section>
-    
-    <script src="script.js"></script>
 </body>
-
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+<script src="script.js"></script>
 <footer>
     <p>&copy;2021 Designed & Built with <i class="fas fa-heart"></i> By Me</p>
 </footer>

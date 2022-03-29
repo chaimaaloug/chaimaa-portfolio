@@ -2,30 +2,38 @@
 <head>
 <title>Firebase Authentication</title>
 <link rel="stylesheet" href="cssFile.css">
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+
 </head>
 
 <body>
   
-<div id="login-box">
-  <div class="left">
-    <h1 id='status'>login</h1>
-    <input type="text" id="email" name="email" placeholder="E-mail" />
-    <input type="password" id="password" name="password" placeholder="Password" />
-    
-    <input type="submit" id='login' name="login" value="Login" />
+  <div id="login-box">
 
+    <div class="left">
+      <h1 id='status'>login</h1>
+      <input type="text" id="email" name="email" placeholder="E-mail" />
+      <input type="password" id="password" name="password" placeholder="Password" />
+      
+      <input type="submit" id='login' name="login" value="Login" />
+    </div>
+    
+    <div class="right">
+      <span class="loginwith">Sign in with<br />social network</span>
+      
+      <button class="social-signin twitter">Log in with Github</button>
+      <button class="social-signin google" id="signInWithGoogle">Log in with Google</button>
+    </div>
+    <div class="or">OR</div>
   </div>
-  
-  
-  
-</div>
-</body>
+  </body>
 
 <script type="module">
   // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -44,6 +52,10 @@
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
   const auth = getAuth();
+ 
+
+  const signInWithGoogleButton = document.getElementById("signInWithGoogle")
+ 
 
  login.addEventListener('click',(e)=>{
    var email = document.getElementById('email').value;
@@ -71,6 +83,19 @@
 
  });
 
+
+//  const signInWithGoogle = () => {
+//    const googleProvider = new firebase.auth.GoogleAuthProvider();
+//    auth.signInWithPopup(googleProvider)
+//    .then(() => {
+//      window.location.assign('./profile');
+//    })
+//    .catch(error => {
+//      console.error(error)
+//    })
+//  }
+
+
 const user = auth.currentUser;
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -79,6 +104,7 @@ onAuthStateChanged(auth, (user) => {
 
   }
 });
+
 
 logout.addEventListener('click',(e)=>{
 
@@ -93,6 +119,58 @@ logout.addEventListener('click',(e)=>{
    });
 
 });
+
+
+firebase
+  .auth()
+  .signInWithPopup(provider)
+  .then((result) => {
+    /** @type {firebase.auth.OAuthCredential} */
+    var credential = result.credential;
+
+    // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+    var token = credential.accessToken;
+
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+
+  firebase.auth().signInWithRedirect(provider);
+
+  firebase.auth()
+  .getRedirectResult()
+  .then((result) => {
+    if (result.credential) {
+      /** @type {firebase.auth.OAuthCredential} */
+      var credential = result.credential;
+
+      // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+      var token = credential.accessToken;
+      // ...
+    }
+
+    // The signed-in user info.
+    var user = result.user;
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
 
 </script>
 
